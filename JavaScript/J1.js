@@ -14,7 +14,7 @@
 // your array should contain the hours of 6am through 7pm
 
 
-var hours;
+var hours; 
 
 
 
@@ -48,10 +48,10 @@ var seattle = {
  avgCookiesPerSale: 6.3,
 
 
- customersEachHour: [],
+ customersEachHour: [23, 24, 45, 56, 37, 48, 29, 60],
 
 
- cookiesEachHour: [],
+ cookiesEachHour: [40, 39, 27],
 
 
  totalDailyCookies: 0,
@@ -109,7 +109,7 @@ var seattle = {
 
 
    var unorderedList;
-
+const myElement = document.getElementById('seattle');
 
 
 
@@ -165,10 +165,7 @@ var seattle = {
 
 
 
-var tokyo = {
-
-
- locationName: 'Tokyo',
+var tokyo = {locationName: 'tokyo',
 
 
  minCustomersPerHour: 23,
@@ -180,7 +177,7 @@ var tokyo = {
  avgCookiesPerSale: 6.3,
 
 
- customersEachHour: [],
+ customersEachHour: [23, 24, 45, 56, 37, 48, 29, 60],
 
 
  cookiesEachHour: [],
@@ -241,7 +238,7 @@ var tokyo = {
 
 
    var unorderedList;
-
+const myElement = document.getElementById('tokyo');
 
 
 
@@ -282,10 +279,7 @@ var tokyo = {
 
 
 
-var dubai = {
-
-
- locationName: 'Dubai',
+var dubai = {locationName: 'dubai',
 
 
  minCustomersPerHour: 23,
@@ -297,10 +291,10 @@ var dubai = {
  avgCookiesPerSale: 6.3,
 
 
- customersEachHour: [],
+ customersEachHour: [23, 24, 45, 56, 37, 48, 29, 60],
 
 
- cookiesEachHour: [],
+ cookiesEachHour: [40, 39, 27],
 
 
  totalDailyCookies: 0,
@@ -358,7 +352,7 @@ var dubai = {
 
 
    var unorderedList;
-
+const myElement = document.getElementById('dubai');
 
 
 
@@ -399,10 +393,7 @@ var dubai = {
 
 
 
-var paris = {
-
-
- locationName: 'Paris',
+var paris = {locationName: 'paris',
 
 
  minCustomersPerHour: 23,
@@ -414,10 +405,10 @@ var paris = {
  avgCookiesPerSale: 6.3,
 
 
- customersEachHour: [],
+ customersEachHour: [23, 24, 45, 56, 37, 48, 29, 60],
 
 
- cookiesEachHour: [],
+ cookiesEachHour: [40, 39, 27],
 
 
  totalDailyCookies: 0,
@@ -475,7 +466,7 @@ var paris = {
 
 
    var unorderedList;
-
+const myElement = document.getElementById('paris');
 
 
 
@@ -516,10 +507,7 @@ var paris = {
 
 
 
-var lima = {
-
-
- locationName: 'Lima',
+var lima = {locationName: 'lima',
 
 
  minCustomersPerHour: 23,
@@ -531,10 +519,10 @@ var lima = {
  avgCookiesPerSale: 6.3,
 
 
- customersEachHour: [],
+ customersEachHour: [23, 24, 45, 56, 37, 48, 29, 60],
 
 
- cookiesEachHour: [],
+ cookiesEachHour: [40, 39, 27],
 
 
  totalDailyCookies: 0,
@@ -592,7 +580,7 @@ var lima = {
 
 
    var unorderedList;
-
+const myElement = document.getElementById('lima');
 
 
 
@@ -653,7 +641,7 @@ function random(min, max) {
 // TODO: list all shop objects in an array
 
 
-var allShops = [seattle, tokyo, dubai, paris, lima];
+var allShops = [];
 
 
 
@@ -674,5 +662,4 @@ var allShops = [seattle, tokyo, dubai, paris, lima];
 
 
 })();
-
 
