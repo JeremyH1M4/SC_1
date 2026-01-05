@@ -36,7 +36,7 @@ var hours;
 var seattle = {
 
 
- locationName: 'Seattle',
+ locationName: 'seattle',
 
 
  minCustomersPerHour: 23,
@@ -641,7 +641,7 @@ function random(min, max) {
 // TODO: list all shop objects in an array
 
 
-var allShops = [];
+var allShops = [seattle, tokyo, dubai, paris, lima];
 
 
 
@@ -662,4 +662,3 @@ var allShops = [];
 
 
 })();
-
