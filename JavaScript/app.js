@@ -11,40 +11,30 @@ const tableElement = document.getElementById('sales-table');
 
 
 
-// TODO:  create a comment below describing how this Constructor function works
-// The contructor funtion creates a sum of all the numbers from a location using 'locationName", 'mincustomsperhour', maxcustomersperhour', and ' avgcookiespersale' as peremeters. giving the sum of 'totaldailycookies'
+// TODO: pass minCustomersPerHour, maxCustomersPerHour, and avgCookiesPerHour as parameters of this function
 
-// - what makes it a constructor function?
-// - This makes it a constructor function because it uses the input from other objects to create a new object, aka the sum of the input from that said location.
 
-// - what do you think the CookieStand.all.push(all) method is doing?
-// It pushes all of the 'this' objects above it into 'cookiestand.all' array.
+// set them as dynamic properties inside of this (based on their passed in data)
+
 
 function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale) {
 
 
  this.locationName = locationName;
+ this.minCustomersPerHour = minCustomersPerHour
+this.maxCustomersPerHour = maxCustomersPerHour
+this.avgCookiesPerSale = avgCookiesPerSale
+ this.customersEachHour = [12, 3, 24];
 
 
- this.minCustomersPerHour = minCustomersPerHour;
-
-
- this.maxCustomersPerHour = maxCustomersPerHour;
-
-
- this.avgCookiesPerSale = avgCookiesPerSale;
-
-
- this.customersEachHour = [];
-
-
- this.cookiesEachHour = [];
+ this.cookiesEachHour = [4 , 45, 28];
 
 
  this.totalDailyCookies = 0;
 
 
- CookieStand.all.push(this);
+
+ // TODO: // push "this" object to the CookieStand.all array on every instantiation
 
 
 }
@@ -54,12 +44,6 @@ function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avg
 
 
 
-
-// TODO: create a comment describing the method below
-// The method is taking the array's (CookieStand) 'customersEachHour' and 'cookiesEachHour' and pushing into the function/object
-
-// - what does prototype mean?
-// Prototype lets you use the an array to male another object using those said arrays without having to create an individual array for that object.
 
 CookieStand.prototype.calcCustomersEachHour = function() {
 
@@ -84,7 +68,7 @@ CookieStand.prototype.calcCustomersEachHour = function() {
 CookieStand.prototype.calcCookiesEachHour = function() {
 
 
- this.calcCustomersEachHour();
+ // TODO: invoke the method that calculates number of customers each hour here
 
 
  for (let i = 0; i < hours.length; i++) {
@@ -113,7 +97,7 @@ CookieStand.prototype.calcCookiesEachHour = function() {
 CookieStand.prototype.render = function() {
 
 
- this.calcCookiesEachHour();
+ // TODO: generate the calculation of customers each hour here
 
 
  const tableRow = document.createElement('tr');
@@ -163,7 +147,7 @@ CookieStand.prototype.render = function() {
 
 
 
-CookieStand.all = [];
+CookieStand.all = [locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale];
 
 
 
@@ -171,8 +155,21 @@ CookieStand.all = [];
 
 
 
-// TODO: instantiate a new CookieStand object (with sample data) for Dubai, Paris, and Lima
+// TODO: instantiate all CookieStand objects (with sample data)
 
+
+
+
+
+
+
+function random(min, max) {
+
+
+ return Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+}
 
 new CookieStand('Seattle', 23, 65, 6.3);
 
@@ -183,15 +180,6 @@ new CookieStand('Dubai', 2, 28, 3.1);
 new CookieStand('Paris', 14, 64, 8);
 
 new CookieStand('Lima', 28, 42, 4.8);
-
-function random(min, max) {
-
-
- return Math.floor(Math.random() * (max - min + 1)) + min;
-
-
-}
-
 
 
 
@@ -248,16 +236,8 @@ function makeHeaderRow() {
 
 
 
-// TODO: create a series of comments in this function where you are confused with what's happening
-
-
-// - what about the code is confusing?
-//The equations inside this code confuses me, the names of these variables amplifies my confusion due to me not knowing the idea behind the code.
-
-// - can you guess what it does?
-
-
 function makeFooterRow() {
+
 
  const tableRow = document.createElement('tr');
 
@@ -282,7 +262,7 @@ function makeFooterRow() {
 
    for (const j = 0; j < CookieStand.all.length; j++){
 
-// dont know what equation does
+
      hourlyTotal += CookieStand.all[j].cookiesEachHour[i];
 
 
@@ -350,6 +330,9 @@ function makeFooterRow() {
 
 
 
+// make some waves.
+
+
 const ocean = document.getElementById('ocean'),
 
 
@@ -365,7 +348,7 @@ const ocean = document.getElementById('ocean'),
 
 
 
-// i dont know what this entire loop does
+
 
 for(let i = 0; i < waveCount; i++){
 
@@ -393,12 +376,6 @@ for(let i = 0; i < waveCount; i++){
 
 
 
-
-
-
-
 ocean.appendChild(docFrag);
-
-
 
 
